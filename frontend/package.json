@@ -1,0 +1,14 @@
+{
+  "name": "tuitiondesk-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "serve": "node serve.mjs",
+    "test": "node test/pdf.test.mjs"
+  },
+  "dependencies": { "pdf-lib": "^1.17.1", "react": "^19.0.0", "react-dom": "^19.0.0" },
+  "devDependencies": { "esbuild": "^0.25.0" }
+}
