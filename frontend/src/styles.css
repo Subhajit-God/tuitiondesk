@@ -87,3 +87,245 @@ th,td{padding:.78rem .85rem;border-bottom:1px solid var(--line);text-align:left;
 @media(prefers-contrast:more){:root{--line:rgba(70,88,112,.5);--line-strong:rgba(55,76,105,.75);--muted:#46566d}:root[data-theme=dark]{--line:#cddcf066;--line-strong:#cddcf099;--muted:#c2d0e2}}
 @supports not ((backdrop-filter:blur(1px))){.card,.stat,.bsec,.sendcard,.table-wrap,.modal,.nav,.topbar,.stickybar,.login .card,.vcard{background:var(--surface-strong)}}
 @media print{body{background:#fff!important;color:#111;font-size:11pt}.topbar,.nav,.scrim,.toasts,.head-actions,.envbar,.stickybar{display:none!important}.shell{padding:0!important}.main{max-width:none;padding:0}.card,.stat,.bsec,.sendcard,.table-wrap{background:#fff!important;border:1px solid #bbb;box-shadow:none;backdrop-filter:none;break-inside:avoid}a{color:#111;text-decoration:none}th{position:static;background:#eee!important;color:#222}}
+
+
+/* =========================================================
+   TuitionDesk — Professional Minimal UI Override
+   Quiet, structured, business-like. Append after the base CSS.
+   ========================================================= */
+
+:root {
+  --bg: #f4f6f9;
+  --bg2: #f4f6f9;
+  --surface: rgba(255,255,255,.88);
+  --surface-strong: #ffffff;
+  --surface-soft: rgba(255,255,255,.72);
+  --card-alt: #f7f9fc;
+  --ink: #1c2736;
+  --muted: #667386;
+  --line: #e4e9f0;
+  --line-strong: #cfd8e3;
+  --brand: #244b73;
+  --brand-2: #285b8e;
+  --brand-3: #5a83ad;
+  --brand-wash: #edf3f9;
+  --good: #28734f;
+  --good-bg: #edf7f1;
+  --warn: #8a641c;
+  --warn-bg: #fbf5e8;
+  --bad: #ad4149;
+  --bad-bg: #fbefef;
+  --info: #315f83;
+  --info-bg: #edf4f9;
+  --muted-bg: #f0f2f5;
+  --shadow-sm: 0 1px 3px rgba(25,42,62,.045);
+  --shadow: 0 4px 14px rgba(25,42,62,.065);
+  --shadow-lg: 0 12px 32px rgba(25,42,62,.12);
+  --blur: 8px;
+  --r: 12px;
+  --tap: 44px;
+}
+
+:root[data-theme="dark"] {
+  --bg: #111923;
+  --bg2: #111923;
+  --surface: rgba(27,39,54,.94);
+  --surface-strong: #1b2736;
+  --surface-soft: rgba(27,39,54,.82);
+  --card-alt: #202d3d;
+  --ink: #e8edf3;
+  --muted: #a1adbb;
+  --line: #304052;
+  --line-strong: #43566b;
+  --brand: #c2d5e8;
+  --brand-2: #a9c8e7;
+  --brand-3: #7ea6ce;
+  --brand-wash: #26394d;
+  --good: #8dc9a6;
+  --good-bg: #20392e;
+  --warn: #e3c27b;
+  --warn-bg: #3b3322;
+  --bad: #e59a9f;
+  --bad-bg: #40272b;
+  --info: #a1c5e2;
+  --info-bg: #23394b;
+  --muted-bg: #2a3542;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.15);
+  --shadow: 0 4px 14px rgba(0,0,0,.18);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,.28);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111923;
+    --bg2: #111923;
+    --surface: rgba(27,39,54,.94);
+    --surface-strong: #1b2736;
+    --surface-soft: rgba(27,39,54,.82);
+    --card-alt: #202d3d;
+    --ink: #e8edf3;
+    --muted: #a1adbb;
+    --line: #304052;
+    --line-strong: #43566b;
+    --brand: #c2d5e8;
+    --brand-2: #a9c8e7;
+    --brand-3: #7ea6ce;
+    --brand-wash: #26394d;
+    --good: #8dc9a6;
+    --good-bg: #20392e;
+    --warn: #e3c27b;
+    --warn-bg: #3b3322;
+    --bad: #e59a9f;
+    --bad-bg: #40272b;
+    --info: #a1c5e2;
+    --info-bg: #23394b;
+    --muted-bg: #2a3542;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.15);
+    --shadow: 0 4px 14px rgba(0,0,0,.18);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,.28);
+  }
+}
+
+html { scroll-behavior: auto; }
+body {
+  background: var(--bg);
+  background-attachment: initial;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+h1,h2,h3,h4 { letter-spacing: -.015em; }
+h1 { font-size: clamp(1.4rem, 2vw, 1.8rem); font-weight: 720; }
+h2 { font-size: 1.08rem; font-weight: 700; }
+h3 { font-size: .96rem; font-weight: 680; }
+
+.card,.stat,.bsec,.sendcard,.table-wrap,.modal,.nav,.topbar,
+.stickybar,.login .card,.vcard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.card,.stat,.bsec,.sendcard { overflow: visible; }
+.card:before,.stat:before,.bsec:before,.sendcard:before { display:none; }
+.card { border-radius: 12px; padding: 1rem; margin-bottom: .9rem; }
+.card:hover { border-color: var(--line); box-shadow: var(--shadow-sm); }
+.stat { border-radius: 12px; padding: .95rem; }
+.stat:hover { transform: none; border-color: var(--line); box-shadow: var(--shadow-sm); }
+.stat .v { font-size: 1.55rem; font-weight: 740; letter-spacing: -.025em; }
+.stat .l { font-size: .8rem; font-weight: 600; }
+
+.topbar {
+  min-height: 60px;
+  background: var(--surface-strong);
+  box-shadow: 0 1px 3px rgba(25,42,62,.04);
+}
+.topbar .title { font-size: 1rem; font-weight: 720; }
+.nav {
+  background: var(--surface-strong);
+  border-radius: 0;
+  box-shadow: 1px 0 8px rgba(25,42,62,.045);
+}
+.nav .brand { font-size: 1.08rem; font-weight: 760; }
+.nav a {
+  min-height: 42px;
+  margin: .12rem 0;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+.nav a:hover:not(.on) { transform: none; }
+.nav a.on {
+  box-shadow: inset 3px 0 0 var(--brand-2);
+  background: var(--brand-wash);
+}
+.main { padding-top: 1.35rem; }
+.page-head { margin-bottom: 1rem; }
+.page-head p { font-size: .88rem; }
+
+.btn {
+  min-height: 40px;
+  padding: .55rem .85rem;
+  border-radius: 8px;
+  font-size: .88rem;
+  font-weight: 650;
+  box-shadow: none;
+  transition: background .15s ease, border-color .15s ease;
+}
+.btn:hover:not(:disabled) {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--line-strong);
+}
+.btn:active:not(:disabled) { transform: none; }
+.btn.primary {
+  color: #fff;
+  background: #285b8e;
+  border-color: #285b8e;
+  box-shadow: none;
+}
+.btn.primary:hover:not(:disabled) { background: #214c78; }
+.btn.danger { background: #ad4149; border-color: #ad4149; }
+.btn.small { min-height: 34px; border-radius: 7px; }
+.icon-btn { border-radius: 8px; }
+.icon-btn:hover { background: var(--brand-wash); }
+
+input,select,textarea {
+  min-height: 40px;
+  padding: .58rem .72rem;
+  border-radius: 8px;
+  background: var(--surface-strong);
+  box-shadow: none;
+  font-size: .9rem;
+}
+input:focus,select:focus,textarea:focus {
+  box-shadow: 0 0 0 3px rgba(55,111,164,.12);
+}
+.field { gap: .3rem; margin-bottom: .75rem; }
+.field .lbl { font-size: .84rem; font-weight: 650; }
+
+.table-wrap { border-radius: 10px; }
+table { font-size: .88rem; }
+th,td { padding: .7rem .8rem; }
+th {
+  background: var(--card-alt);
+  font-size: .7rem;
+  letter-spacing: .045em;
+}
+tr.click:hover { background: var(--brand-wash); }
+
+.chip { padding: .2rem .55rem; font-size: .72rem; font-weight: 680; }
+.banner { border-radius: 8px; }
+.tabs button { border-radius: 6px 6px 0 0; font-size: .88rem; }
+.tabs button:hover { background: transparent; }
+
+.overlay { background: rgba(17,28,42,.38); }
+.modal { border-radius: 12px; }
+@media(min-width:700px) { .modal { border-radius: 12px; } }
+.toast { border-radius: 9px; }
+.login .card,.vcard { border-radius: 12px; }
+
+.bsec { border-radius: 10px; }
+.bwm { border-radius: 8px; }
+.tap { border-radius: 8px; transition: background .15s ease; }
+.tap:hover { transform: none; box-shadow: none; }
+.paybtn {
+  border-radius: 8px;
+  background: #285b8e;
+  box-shadow: none;
+}
+.bar>i { background: #477eae; }
+.sendmsg,.msgpre { border-radius: 8px; }
+
+@media(max-width:699px) {
+  body { font-size: 14px; }
+  .main { padding: 1rem .8rem calc(1rem + env(safe-area-inset-bottom)); }
+  .topbar { min-height: 56px; }
+  .card { padding: .85rem; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+@media print {
+  body { background: #fff !important; }
+}
