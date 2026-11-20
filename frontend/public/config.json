@@ -1,0 +1,14 @@
+{
+  "apiUrl": "https://script.google.com/macros/s/AKfycbxbnRXYR3OTDzZ5EWmfmaqW7Vk_rOGDqrY-xFyC97ABvw3eLbzzam7X5ojokqMQ9Vk_/exec",
+  "publicUrl": "https://tuitiondesk-frontend-blue.vercel.app/",
+  "firebase": {
+    "apiKey": "AIzaSyASnzW3WjNoHdFq2dYEqkR65IsmK41jPW8",
+    "authDomain": "tuitiondesk-660ca.firebaseapp.com",
+    "projectId": "tuitiondesk-660ca",
+    "storageBucket": "tuitiondesk-660ca.firebasestorage.app",
+    "messagingSenderId": "943718135249",
+    "appId": "1:943718135249:web:6c90cff16c34ac162d9cf0",
+    "measurementId": "G-54EJSG4F7K"
+  },
+  "vapidKey": "BB1uX0O6d6uhA-EUP3b6ZmmtjXZggv7DmDPZUyvoRHGYZfVKJC733jP6ghOcwXv5hPBecPz76plOgR09xYhBNJY"
+}

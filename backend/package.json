@@ -1,0 +1,1 @@
+{ "name": "tuitiondesk-backend", "private": true, "version": "1.0.0", "scripts": { "test": "node test/run.js", "dev": "node dev-server.js" } }
