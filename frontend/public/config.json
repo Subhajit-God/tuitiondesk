@@ -1,6 +1,6 @@
 {
   "apiUrl": "https://script.google.com/macros/s/AKfycbxbnRXYR3OTDzZ5EWmfmaqW7Vk_rOGDqrY-xFyC97ABvw3eLbzzam7X5ojokqMQ9Vk_/exec",
-  "publicUrl": "https://tuitiondesk-frontend-blue.vercel.app/",
+  "publicUrl": "https://tuitiondesk-frontend.vercel.app/",
   "firebase": {
     "apiKey": "AIzaSyASnzW3WjNoHdFq2dYEqkR65IsmK41jPW8",
     "authDomain": "tuitiondesk-660ca.firebaseapp.com",
